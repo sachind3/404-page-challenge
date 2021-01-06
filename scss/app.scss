@@ -1,0 +1,125 @@
+$font-space-mono: "Space Mono", monospace;
+$font-inconsolata: "Inconsolata", monospace;
+$font-montserrat: "Montserrat", sans-serif;
+$body-text: #333333;
+$gray-text: #333333;
+$transition: all 0.3s ease-in-out;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+body {
+  font-family: $font-space-mono;
+  font-size: 16px;
+  color: $body-text;
+  line-height: 1.35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  max-width: 90em;
+  margin: 0 auto;
+  padding: 0 4em;
+  @media only screen and (max-width: 62em) {
+    padding: 0 2em;
+  }
+}
+header {
+  width: 100%;
+  padding: 2em 0;
+  .logo {
+    font-family: $font-inconsolata;
+    text-transform: uppercase;
+    color: $body-text;
+    font-size: 1.3rem;
+  }
+}
+.section-content {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 42em) {
+      flex-direction: column;
+    }
+    .page-image {
+      width: 50%;
+      @media only screen and (max-width: 42em) {
+        width: 100%;
+      }
+      img {
+        width: 80%;
+        @media only screen and (max-width: 62em) {
+          width: 100%;
+        }
+      }
+    }
+    .page-content {
+      width: 50%;
+      font-family: $font-space-mono;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @media only screen and (max-width: 42em) {
+        width: 100%;
+      }
+      h2 {
+        font-weight: 700;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        @media only screen and (max-width: 90em) {
+          font-size: 3.5rem;
+        }
+        @media only screen and (max-width: 62em) {
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        max-width: 24rem;
+        font-size: 1.5rem;
+        color: $gray-text;
+        margin-bottom: 4rem;
+        @media only screen and (max-width: 62em) {
+          font-size: 1.2rem;
+          margin-bottom: 3rem;
+        }
+        @media only screen and (max-width: 42em) {
+          font-size: 1rem;
+        }
+      }
+      .btn {
+        background: $body-text;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        transition: $transition;
+        border: 1px solid $body-text;
+        &:hover {
+          color: $body-text;
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+footer {
+  font-family: $font-montserrat;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 2em 0;
+}
